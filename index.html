@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#f3eee4">
+  <title>接龙 · 词变</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.webmanifest">
+</head>
+<body>
+  <div id="boot" class="boot">
+    <div>
+      <h1>接龙 · 词变</h1>
+      <p id="boot-msg">正在加载词库…</p>
+      <label id="picker" class="file-btn" hidden>
+        选择 data.json
+        <input id="file" type="file" accept="application/json,.json">
+      </label>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <header class="masthead">
+      <h1 id="title">接龙</h1>
+      <div class="sub">文字游戏求解</div>
+    </header>
+
+    <section class="panel">
+      <div class="tabs">
+        <button id="tab-chain" class="active" type="button">接龙</button>
+        <button id="tab-ladder" type="button">词变</button>
+      </div>
+
+      <div class="fields">
+        <div class="row">
+          <label>起点
+            <input id="start" type="text" maxlength="2" autocomplete="off" autocapitalize="off" value="核算">
+          </label>
+          <button id="swap" class="swap" type="button" title="交换">⇄</button>
+          <label>终点
+            <input id="end" type="text" maxlength="2" autocomplete="off" autocapitalize="off" value="总结">
+          </label>
+        </div>
+      </div>
+
+      <div class="options">
+        <span>显示条数</span>
+        <input id="topn" type="number" min="1" max="20" value="5">
+      </div>
+
+      <button id="go" class="go" type="button">求解</button>
+      <p id="status" class="status"></p>
+    </section>
+
+    <div id="results" class="results"></div>
+    <p class="hint">电脑上在 web 目录运行 python -m http.server 8000，然后用浏览器打开。iPhone 可以把这一整个文件夹放到 GitHub Pages，或用 Safari 打开后点「添加到主屏幕」。</p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

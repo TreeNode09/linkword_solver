@@ -1,0 +1,9 @@
+{
+  "name": "接龙 · 词变",
+  "short_name": "接龙",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f3eee4",
+  "theme_color": "#f3eee4",
+  "lang": "zh-CN"
+}
