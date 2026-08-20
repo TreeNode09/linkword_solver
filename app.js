@@ -360,7 +360,7 @@
 
         const explEl = document.createElement("div");
         explEl.className = "ladder-expl";
-        explEl.textContent = explain(chain[i]);
+        if (i > 0 && i < chain.length - 1) explEl.textContent = explain(chain[i]);
         step.append(wordEl, explEl);
         ladder.appendChild(step);
       }
